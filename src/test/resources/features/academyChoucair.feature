@@ -4,5 +4,11 @@ Feature: Academy Choucair
   @scenario1
   Scenario: Search for an automation course
     Given that Brandon wants to learn automation at the Choucair Academy
-    When he searches for the course ISTQB - Test Automation Engineer on the Choucair Academy platform
-    Then he finds the course called ISTQB - Test Automation Engineer
+    | strUser   | strPassword   |
+    | yourUser  | yourPwd       |
+    When he searches for the course on the Choucair Academy platform
+    | strCourse                         |
+    | ISTQB - Test Automation Engineer  |
+    Then he finds the course called
+    | strCourse                           |
+    | ISTQB - Test Automation Engineer    |
